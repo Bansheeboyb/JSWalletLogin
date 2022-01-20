@@ -19,7 +19,7 @@ async function login() {
       .then(function (user) {
         console.log("logged in user:", user);
         console.log(user.get("ethAddress"));
-        document.getElementById("walletAddress").textContent = "okokok";
+        document.getElementById("walletAddress").textContent = user;
       })
       .catch(function (error) {
         console.log(error);
