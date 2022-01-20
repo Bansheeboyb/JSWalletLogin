@@ -20,7 +20,10 @@ async function login() {
         console.log("logged in user:", user);
         console.log(user.get("ethAddress"));
         document.getElementById("walletAddress").textContent =
-          user.get("UserAlias");
+          "User Name: " +
+          user.get("UserAlias") +
+          " Wallet Address: " +
+          user.get("ethAddress");
       })
       .catch(function (error) {
         console.log(error);
