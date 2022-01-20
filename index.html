@@ -6,12 +6,53 @@
     <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
     <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.7.1/web3-provider.min.js"></script>
     <script src="https://unpkg.com/moralis@0.0.184/dist/moralis.js"></script>
+    <link rel="stylesheet" href="css/tailwind.css" />
   </head>
 
-  <body>
-    <button id="btn-login">WalletConnect Login</button>
-    <button id="btn-logout">Logout</button>
+  <body class="flex flex-col h-screen">
+    <section class="w-full px-8 py-16 bg-gray-100 xl:px-8 flex-grow">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col items-center md:flex-row">
+          <div class="w-full space-y-5 md:w-3/5 md:pr-16">
+            <p class="font-medium text-blue-500 uppercase">Web 3.0 Login</p>
+            <h2
+              class="text-2xl font-extrabold leading-none text-black sm:text-3xl md:text-5xl"
+            >
+              Login With Your Wallet To Fully Control Your Identity!
+            </h2>
+            <p class="text-xl text-gray-600 md:pr-16">
+              This is how the internet will work 2 years from now.
+            </p>
+          </div>
+
+          <div class="w-full mt-16 md:mt-0 md:w-2/5">
+            <div
+              class="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7"
+            >
+              <h3 class="mb-6 text-2xl font-medium text-center">
+                Simply Use Your Wallet To Login!
+              </h3>
+              <button
+                class="w-full px-3 py-4 font-medium text-white bg-blue-600 rounded-lg"
+                id="btn-login"
+              >
+                WalletConnect Login
+              </button>
+              <button
+                class="w-full px-3 py-4 font-medium text-white bg-blue-600 rounded-lg mt-5"
+                id="btn-logout"
+              >
+                Logout
+              </button>
+              <p
+                class="w-full mt-4 text-sm text-center text-gray-500"
+                id="walletAddress"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script type="text/javascript" src="./main.js"></script>
-    <span id="walletAddress"></span>
   </body>
 </html>
