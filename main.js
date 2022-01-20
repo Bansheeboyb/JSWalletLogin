@@ -34,6 +34,7 @@ async function login() {
 async function logOut() {
   await Moralis.User.logOut();
   console.log("logged out");
+  document.getElementById("walletAddress").textContent = "Logged OUT!";
 }
 
 document.getElementById("btn-login").onclick = login;
