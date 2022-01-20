@@ -19,11 +19,11 @@ async function login() {
       .then(function (user) {
         console.log("logged in user:", user);
         console.log(user.get("ethAddress"));
+        document.getElementById("userName").textContent =
+          "User Name: " + user.get("UserAlias");
+
         document.getElementById("walletAddress").textContent =
-          "User Name: " +
-          user.get("UserAlias") +
-          " Wallet Address: " +
-          user.get("ethAddress");
+          " Wallet Address: " + user.get("ethAddress");
       })
       .catch(function (error) {
         console.log(error);
@@ -34,7 +34,8 @@ async function login() {
 async function logOut() {
   await Moralis.User.logOut();
   console.log("logged out");
-  document.getElementById("walletAddress").textContent = "Logged OUT!";
+  document.getElementById("userName").textContent = "Logged OUT!";
+  document.getElementById("walletAddress").textContent = "";
 }
 
 document.getElementById("btn-login").onclick = login;
