@@ -13,7 +13,7 @@ async function login() {
     const authOptions = {
       provider: "walletconnect",
       signingMessage: "Hello World!",
-      chainId: 80001,
+      chainId: 1,
     };
     user = await Moralis.authenticate(authOptions)
       .then(function (user) {
